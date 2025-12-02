@@ -8,16 +8,13 @@ apt update --fix-missing -y
 apt install python3 -y
 apt install python3-pip -y || apt install python-pip -y
 
-python3 -m venv cypat
-source cypat/bin/activate
-
-pip3 install argparse || pip install argparse
+pip3 install --break-system-packages argparse ||  pip install --break-system-packages argparse
 #sudo -u $(logname) pip3 install os-sys
-pip3 install lib-platform || pip install lib-platform
+pip3 install --break-system-packages lib-platform || pip install --break-system-packages lib-platform
 pip3 uninstall crontab || pip uninstall crontab
-pip3 install python-crontab || pip install python-crontab
-pip3 install pexpect || pip install pexpect
-pip3 install regex || pip install regex
+pip3 install --break-system-packages python-crontab || pip install --break-system-packages python-crontab
+pip3 install --break-system-packages pexpect || pip install --break-system-packages pexpect
+pip3 install --break-system-packages regex || pip install --break-system-packages regex
 
 echo "Finished setting up!"
 
