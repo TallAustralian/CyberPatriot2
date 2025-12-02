@@ -8,6 +8,9 @@ apt update --fix-missing -y
 apt install python3 -y
 apt install python3-pip -y || apt install python-pip -y
 
+python3 -m venv cypat
+source cypat/bin/activate
+
 pip3 install argparse || pip install argparse
 #sudo -u $(logname) pip3 install os-sys
 pip3 install lib-platform || pip install lib-platform
